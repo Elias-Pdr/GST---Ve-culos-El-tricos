@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+body, html {
+    max-width: 390px;
+    min-height: 834px;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: wheat;
+}
+.shadow {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fadeOutShadow 2s forwards;
+    z-index: 999;
+}
+.shadow img {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-125px, -125px);
+}
+
+.tomada {
+    position: relative;
+    animation: moveRight 2s forwards;
+}
+
+.moto {
+    position: relative;
+    animation: moveLeft 2s forwards;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translate(-125px, -125px);
+    }
+    40% {
+        transform: translate(-125px, -125px);
+    }
+    100% {
+        transform: translate(200px, -125px);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translate(-125px, -125px);
+    }
+    50% {
+        transform: translate(-125px, -125px);
+    }
+    100% {
+        transform: translate(-500px, -125px);
+
+    }
+}
+
+@keyframes fadeOutShadow {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0 20px 13px rgba(255, 255, 255, .4);
+    z-index: 2;
+    position: relative; /* Adicione esta linha */
+}
+header > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    height: 100%;
+}
+header > div > div span:nth-child(2){
+    margin: 1px 0px;
+    width: 18px;
+    animation-delay: 0.15s;
+}
+header > div > div span:nth-child(3){
+    width: 13px;
+    animation-delay: 0.3s;
+}
+header h1 {
+    font-size: 30px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 4px;
+}
+header span {
+    display: inline-block;
+    background: rgb(0, 0, 0);
+    width: 25px;
+    height: 5px;
+    transform-origin: left;
+    animation: growWidth 3s alternate;
+}
+
+@keyframes growWidth {
+
+    0% {
+        /* width será sobrescrito pelo inline style ou pelo seletor específico */
+    }
+    39% {
+        /* width será sobrescrito pelo inline style ou pelo seletor específico */
+    }
+
+    40% {
+        width: 0;
+    }
+    100% {
+        /* width será sobrescrito pelo inline style ou pelo seletor específico */
+    }
+}
+
+main{
+    background-color: white;
+}
+.banner{
+    width: 100%;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+
+main > h2{
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+}
+
+
+.cardVeiculoShRoom{
+    width: fit-content;
+    border-radius: 20px;
+    padding: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d4d4d4;
+    margin: 0px 10px;
+    margin-bottom: 40px;
+}
+.nomeFloatVeiculoShRoom{
+    position: absolute;
+    top: 26px;
+    left: -5px;
+    background-color: #eb5050;
+}
+.nomeVeiculoShRoom{
+    font-size: 20px;
+    padding: 6px 24px;
+    color: white;
+
+}
+.imgCardVeiculoShRoom{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.descricaoVeiculoShRoom{
+    background-color: #065d19;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+        border-radius: 0px 0px 20px 20px;
+
+}
+
+.descricaoVeiculoShRoom p{
+    width: 33.33%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 0;
+}
+.verDetalhesVeiculoShRoom{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 16px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .7);
+    z-index: 1;
+
+}
+.linhaDivisoriaShRoom{
+    width: 30%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .3);
+    border: none;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    z-index: 0;
+}
+.comParcelasShRoom{
+    font-size: 20px;
+    font-weight: bold;
+}
+.precoVeiculoShRoom{
+    color: #076b1d;
+    font-size: 44px;
+    font-weight: 900;
+}
