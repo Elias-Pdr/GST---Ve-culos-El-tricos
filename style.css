@@ -113,10 +113,11 @@ header > div > div span:nth-child(3){
     width: 13px;
     animation-delay: 0.3s;
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
 header h1 {
     font-size: 30px;
     font-weight: 800;
-    font-family: Arial, Helvetica, sans-serif;
+font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin-right: 4px;
 }
 header span {
@@ -239,5 +240,6 @@ main > h2{
 .precoVeiculoShRoom{
     color: #076b1d;
     font-size: 44px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-weight: 900;
 }
